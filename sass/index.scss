@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@300;400;600;700&display=swap');
+
+/* MISC */
+@import './misc/variables';
+@import './misc/mixins';
+@import './misc/normalize';
+
+/* PARTIALS */
+@import './partials/header-aside';
+
+/* VIEWS */
+@import './views/home';
+@import './views/aboutme';
+@import './views/education';
+@import './views/proyects';
+@import './views/skills';
+@import './views/workexperience';
+@import './views/contactme';

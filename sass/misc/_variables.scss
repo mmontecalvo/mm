@@ -1,0 +1,42 @@
+/* COLORS */
+$color-primary: #743294;
+$color-secondary: #FDFF85;
+$color-text: #FFF5F3;
+$color-background: #000000;
+$color-aside: #161414;
+
+/* FONT-FAMILY */
+$fonts:(
+    title: ('Black Ops One', cursive),
+    text: ('Rajdhani', sans-serif)
+);
+@each $key, $val in $fonts{
+    .font-#{$key}{
+        font-family: #{$val};
+    }
+}
+
+/* FONT-SIZE REFERENCE */
+$text-desktop: 1rem;
+$text-intermediate: 0.8rem;
+$text-mobile: 0.66rem;
+
+/* FONT-SIZES */
+$text-xxl: 9.6em;
+$text-xl: 5.4em;
+$text-l: 3.6em;
+$text-m: 2.4em;
+$text-base: 1.6em;
+$text-s: 1.4em;
+$text-xs: 1.2em;
+
+
+/* SPACES */
+$spacing-l: 3rem;
+$spacing-m: 2rem;
+$spacing-s: 1rem;
+$spacing-xs: 0.1rem;
+
+/* BORDERS */
+$b-desktop: 0.2rem;
+$b-mobile: 0.1rem;

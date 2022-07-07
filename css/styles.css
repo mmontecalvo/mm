@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@300;400;600;700&display=swap");
+/* MISC */
+/* COLORS */
+/* FONT-FAMILY */
+.font-title {
+  font-family: Black Ops One, cursive; }
+
+.font-text {
+  font-family: Rajdhani, sans-serif; }
+
+/* FONT-SIZE REFERENCE */
+/* FONT-SIZES */
+/* SPACES */
+/* BORDERS */
+/* MIXINS */
+/* NORMALIZE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #000000;
+  height: auto;
+  font-family: "Rajdhani", sans-serif; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+/* PARTIALS */
+header {
+  width: 100%;
+  height: 10vh;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  position: fixed;
+  z-index: 2;
+  font-size: 1rem; }
+  header #theme {
+    padding: 0.1rem;
+    background-color: #743294;
+    opacity: 0.7;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0; }
+    header #theme .theme__icon {
+      margin: 0.7rem; }
+      header #theme .theme__icon:nth-child(2) {
+        display: none; }
+    header #theme .dark {
+      fill: #000000;
+      cursor: pointer; }
+    header #theme .light {
+      stroke: #FFF5F3;
+      fill: none;
+      cursor: pointer; }
+  header .btns-container .fas {
+    padding: 0.7rem;
+    fill: #743294;
+    cursor: pointer; }
+    header .btns-container .fas:nth-child(2) {
+      display: none; }
+
+.aside {
+  width: 100%;
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #161414;
+  font-size: 1rem;
+  z-index: 1; }
+  .aside .aside-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0; }
+    .aside .aside-wrapper .logo-section {
+      min-height: 20vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      background-color: #000;
+      color: #FFF5F3; }
+      .aside .aside-wrapper .logo-section .logo {
+        display: grid;
+        place-items: center; }
+    .aside .aside-wrapper .nav-links {
+      width: 100%; }
+      .aside .aside-wrapper .nav-links .nav__menu {
+        width: 100%; }
+        .aside .aside-wrapper .nav-links .nav__menu .menu__link {
+          display: block;
+          color: #743294;
+          font-size: 1.6em;
+          font-weight: semibold;
+          text-align: center;
+          line-height: 2em;
+          border-top: 0.2rem solid #000000;
+          transition: background-color 1s; }
+          .aside .aside-wrapper .nav-links .nav__menu .menu__link--border-bottom {
+            border-bottom: 0.2rem solid #000000; }
+          .aside .aside-wrapper .nav-links .nav__menu .menu__link:hover {
+            color: #FDFF85;
+            background-color: #000000; }
+    .aside .aside-wrapper .social-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem auto; }
+      .aside .aside-wrapper .social-icons svg {
+        fill: #743294;
+        height: 3rem;
+        width: 3rem; }
+        .aside .aside-wrapper .social-icons svg:hover {
+          fill: #FDFF85; }
+    .aside .aside-wrapper .main-header__copyright {
+      color: #FFF5F3;
+      font-size: 1.2em;
+      font-weight: regular;
+      text-align: center;
+      line-height: 1em;
+      padding: 2rem 0; }
+
+.show-nav {
+  height: 100%;
+  overflow: visible; }
+
+@media screen and (min-width: 950px) {
+  header {
+    justify-content: flex-end;
+    align-items: flex-end; }
+    header .btns-container {
+      display: none; }
+  .aside {
+    width: 20rem;
+    height: 100%; }
+    .aside .aside-wrapper .logo-section {
+      min-height: 20vh; }
+      .aside .aside-wrapper .logo-section .logo img {
+        width: 50px;
+        height: auto; }
+    .aside .aside-wrapper .social-icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.1rem;
+      margin: 0 auto; }
+    .aside .aside-wrapper .main-header__copyright {
+      padding: 1rem; } }
+
+/* VIEWS */

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/prueba.scss css/pruebacss.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build-sass": "node-sass --include-path scss sass/index.scss css/styles.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
 
   },
   "author": "",

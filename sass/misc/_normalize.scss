@@ -1,0 +1,26 @@
+/* NORMALIZE */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: $color-background;
+    height: auto;
+    font-family: map-get($fonts, text);
+}
+
+ul{
+    list-style-type: none;
+    // padding-left: 0;
+}
+
+a{
+    text-decoration: none;
+}
