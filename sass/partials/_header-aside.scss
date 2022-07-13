@@ -10,7 +10,7 @@ header{
 
     #theme{
         padding: $spacing-xs;
-        background-color: $color-primary;
+        background-color: var(--color-primary);
         opacity: 0.7;
         border-radius: 0.5rem;
         @include flex(row, center, center, 0);
@@ -24,12 +24,12 @@ header{
         }
 
         .dark{
-            fill: $color-background;
+            fill: var(--color-background);
             cursor: pointer;
         }
 
         .light{
-            stroke: $color-text;
+            stroke: var(--color-text);
             fill: none;
             cursor: pointer;
         }
@@ -38,7 +38,7 @@ header{
     .btns-container{
         .fas{
             padding: 0.7rem;
-            fill: $color-primary;
+            fill: var(--color-primary);
             cursor: pointer;
 
             &:nth-child(2){
@@ -55,7 +55,7 @@ header{
     top: 0;
     left: 0;
     overflow: hidden;
-    background-color: $color-aside;
+    background-color: var(--color-aside);
     font-size: $text-desktop;
     z-index: 100;
 
@@ -67,7 +67,7 @@ header{
             min-height: 20vh;
             width: 100%;
             @include flex(column, center, center, 0);
-            background-color: $color-background;
+            background-color: var(--color-background);
 
             .logo{
                 display: grid;
@@ -88,22 +88,22 @@ header{
 
                 .menu__link{
                     display: block;
-                    @include text($color-primary, $text-base, semibold, center, 3em);
-                    border-top: 0.2rem solid $color-background;
+                    @include text(var(--color-primary), $text-base, semibold, center, 3em);
+                    border-top: 0.2rem solid var(--color-background);
                     
                     transition: background-color 1s;
 
                     &--border-bottom{
-                        border-bottom: 0.2rem solid $color-background;
+                        border-bottom: 0.2rem solid var(--color-background);
                     }
 
                     &:hover{
-                        color: $color-secondary;
-                        background-color: $color-background;
+                        color: var(--color-secondary);
+                        background-color: var(--color-background);
                     }
 
                     &--active{
-                        color: $color-secondary;
+                        color: var(--color-secondary);
                     }
                 }
             }
@@ -114,18 +114,18 @@ header{
             margin: $spacing-m auto;
 
             svg{
-                fill: $color-primary;
+                fill: var(--color-primary);
                 height: 3rem;
                 width: 3rem;
         
                 &:hover{
-                    fill: $color-secondary;
+                    fill: var(--color-secondary);
                 }
             }
         }
 
         .main-header__copyright{
-            @include text($color-text, $text-xs, regular, center, 1em);
+            @include text(var(--color-text), $text-xs, regular, center, 1em);
             padding: $spacing-m 0;
         }
     }

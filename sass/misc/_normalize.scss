@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    background: $color-background;
+    background: var(--color-background);
     height: auto;
     font-family: map-get($fonts, text);
 }
@@ -21,8 +21,8 @@ body{
     height: 4px; 
     width: 4px;
     border-radius: 2px;
-    box-shadow: 3px 3px 15px 3px $color-primary;
-    background: $color-primary;
+    box-shadow: 3px 3px 15px 3px var(--color-primary);
+    background: var(--color-primary);
   }
 
 ul{

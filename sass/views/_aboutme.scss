@@ -12,7 +12,7 @@
             left: 0;
             height: 50%;
             width: 100%;
-            background: linear-gradient(180deg, transparent 0%, $color-background);
+            background: linear-gradient(180deg, transparent 0%, var(--color-background));
             z-index: 2;
         }
         
@@ -42,13 +42,15 @@
             z-index: 1;
         
             .banner__title{
-                @include text ($color-background, 25em, regular, center, 1rem);
+                @include text (var(--color-background), 15em, regular, center, 1rem);
                 opacity: 0.8;
                 animation-duration: 2s;
                 animation-name: show;
             }
 
             svg{
+                fill: var(--color-background);
+                fill-opacity: 0.8;
                 animation-duration: 2s;
                 animation-name: moveUpDown;
                 animation-iteration-count: infinite;
@@ -65,25 +67,25 @@
     .info__title{
         @include flex (column, center, center, $spacing-s);
         .title__name {
-            @include text ($color-primary, $text-xxl, regular, center, 1em);
+            @include text (var(--color-primary), $text-xxl, regular, center, 1em);
         }
     
         .title__degree{
-            @include text ($color-secondary, $text-xl, semibold, center, 1em);
+            @include text (var(--color-secondary), $text-xl, semibold, center, 1em);
         }
     }
     
     .info__text{
         @include flex (column, center, center, $spacing-l);
-        @include text ($color-text, $text-l, regular, justify, 1em);
+        @include text (var(--color-text), $text-l, regular, justify, 1em);
         hyphens: auto;
         padding: 0 $spacing-l*4;
     }
 
     .info__gallery{
         display: grid;
-        grid-template-columns: repeat(4, 430px);
-        grid-template-rows: repeat(13, 145px);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(13, 1fr);
         
         img{
             transition: filter 0.3s ease-in-out;

@@ -10,12 +10,16 @@ const themeMode = (themeState) => {
     if(themeState === 'light'){
         sun.style.display = 'none';
         moon.style.display = 'block';
-        back.style.backgroundColor = '#FFFFFF';
+        document.querySelector("html").style.setProperty('--color-background', "#FFFFFF");
+        document.querySelector("html").style.setProperty('--color-aside', "#F8EAED");
+        document.querySelector("html").style.setProperty('--color-text', "#161414");
     }
     else if(themeState === 'dark'){
         sun.style.display = 'block';
         moon.style.display = 'none';
-        back.style.backgroundColor = '#000000';
+        document.querySelector("html").style.setProperty('--color-background', "#000000");
+        document.querySelector("html").style.setProperty('--color-aside', "#161414");
+        document.querySelector("html").style.setProperty('--color-text', "#F8EAED");
     }
 }
 
