@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matias Montecalvo | Web Developer</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>About me | Matias Montecalvo</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
@@ -35,28 +36,28 @@
         <div class="aside-wrapper">
             <div class="logo-section">
                 <a class="logo" rel="home" href="#">
-                    <img src="./img/logo.png" alt="logo">
+                    <img src="../img/logo.png" alt="logo">
                 </a>
             </div>
             <nav class="nav-links">
                 <ul class="nav__menu">
                     <li class="menu__item">
-                        <a class="menu__link" href="./pages/aboutme.html">ABOUT ME</a>
+                        <a class="menu__link menu__link--active" href="./aboutme.html">ABOUT ME</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="./pages/education.html">EDUCATION</a>
+                        <a class="menu__link" href="./education.html">EDUCATION</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="./pages/proyects.html">PROYECTS</a>
+                        <a class="menu__link" href="./proyects.html">PROYECTS</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="./pages/skills.html">SKILLS</a>
+                        <a class="menu__link" href="./skills.html">SKILLS</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link menu__link--size" href="./pages/workexperience.html">WORK EXPERIENCE</a>
+                        <a class="menu__link menu__link--size" href="./workexperience.html">WORK EXPERIENCE</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link menu__link--border-bottom" href="./pages/contactme.html">CONTACT ME</a>
+                        <a class="menu__link menu__link--border-bottom" href="./contactme.html">CONTACT ME</a>
                     </li>
                 </ul>
             </nav>
@@ -101,11 +102,61 @@
             <span class="main-header__copyright">© 2022 Ehwaz, Matias Montecalvo. All rights reserved.</span>
         </div>
     </aside>
-   
-        
-
+    <main id="about-me" class="main-content">
+        <section class="main-content__banner">
+            <img class="banner__img banner__bg" src="../img/aboutme/background.png" data-depth="0.34">
+            <img class="banner__img banner__fg" src="../img/aboutme/foreground.png" data-depth="0.24">
+            <div class="banner__text">
+                <svg width="123" height="123" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M61.6329 107.625L31.6328 72.623C31.0362 71.9271 30.8569 70.9655 31.1625 70.1013C31.6005 68.8623 32.8942 68.1709 34.1451 68.4561L34.4326 68.5395L53.8125 75.3939L53.8125 15.375H69.1875L69.1875 75.4887L88.8333 68.5395C89.5895 68.2721 90.4202 68.376 91.0823 68.8058L91.3551 69.0098C92.3469 69.8599 92.5293 71.3037 91.8271 72.366L91.6331 72.623L61.6329 107.625Z" fill="black" fill-opacity="0.8"/>
+                </svg>            
+                <h1 class="banner__title font-title">ABOUT ME</h1>
+                <svg width="123" height="123" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M61.6329 107.625L31.6328 72.623C31.0362 71.9271 30.8569 70.9655 31.1625 70.1013C31.6005 68.8623 32.8942 68.1709 34.1451 68.4561L34.4326 68.5395L53.8125 75.3939L53.8125 15.375H69.1875L69.1875 75.4887L88.8333 68.5395C89.5895 68.2721 90.4202 68.376 91.0823 68.8058L91.3551 69.0098C92.3469 69.8599 92.5293 71.3037 91.8271 72.366L91.6331 72.623L61.6329 107.625Z" fill="black" fill-opacity="0.8"/>
+                </svg>
+            </div>
+        </section>
+        <section class="main-content__info">
+            <article class="info__title">
+                <h2 class="title__name font-title" data-aos="zoom-in-up" data-aos-duration="2000">MATIAS MONTECALVO</h2>
+                <h3 class="title__degree" data-aos="zoom-in-up" data-aos-duration="2000">Web Developer Full Stack</h3>
+            </article>
+            <article class="info__text" data-aos="zoom-in-up" data-aos-duration="2000">
+                <p>I'm a Web Development student, I'm 25 years old, and I live in the province of Buenos Aires, Argentina. I am taking my first steps in the programming field, I have knowledge of design, and I found, mainly in the Front-end area a passion.</p>
+                <p>Currently I belong to the national training plan in programming #ArgentinaPrograma, I study the career of Full Stack Web Developer in Coderhouse, and I am constantly training myself in an autodidactic way.</p>
+                <p>On the other hand, I train in the investment sector, I took the Global Investment Advisor course at ICB (Instituto de capacitación Bursátil), and I aim to take the CNV (Comisión Nacional de Valores) suitability exam. I currently trade foreign exchange and invest in cryptocurrencies.</p>
+                <p>In addition, I am passionate about sports, mindfulness, and painting mandalas and graffiti. Here below is some of what I do...</p>
+            </article>
+            <article class="info__gallery" data-aos="zoom-in-up" data-aos-duration="2000">
+                <img src="../img/aboutme/img01.jpg" alt="">
+                <img src="../img/aboutme/img02.jpg" alt="">
+                <img src="../img/aboutme/img03.jpg" alt="">
+                <img src="../img/aboutme/img04.jpg" alt="">
+                <img src="../img/aboutme/img05.jpg" alt="">
+                <img src="../img/aboutme/img06.jpg" alt="">
+                <img src="../img/aboutme/img07.jpg" alt="">
+                <img src="../img/aboutme/img08.jpg" alt="">
+                <img src="../img/aboutme/img09.jpg" alt="">
+                <img src="../img/aboutme/img10.jpg" alt="">
+                <img src="../img/aboutme/img11.jpg" alt="">
+                <img src="../img/aboutme/img12.jpg" alt="">
+                <img src="../img/aboutme/img13.jpg" alt="">
+                <img src="../img/aboutme/img14.jpg" alt="">
+                <img src="../img/aboutme/img15.jpg" alt="">
+                <img src="../img/aboutme/img16.jpg" alt="">
+            </article>
+        </section>
+    </main>
     
-    <script src="index.js"></script>
+   
+     
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="../index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

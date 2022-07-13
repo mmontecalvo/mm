@@ -5,7 +5,7 @@ header{
     padding: 1rem;
     @include flex(row, space-between, center, 0);
     position: fixed;
-    z-index: 2;
+    z-index: 101;
     font-size: $text-desktop;
 
     #theme{
@@ -57,7 +57,7 @@ header{
     overflow: hidden;
     background-color: $color-aside;
     font-size: $text-desktop;
-    z-index: 1;
+    z-index: 100;
 
     .aside-wrapper{
         height: 100vh;
@@ -67,16 +67,16 @@ header{
             min-height: 20vh;
             width: 100%;
             @include flex(column, center, center, 0);
-            background-color: #000;
-            color: $color-text;
+            background-color: $color-background;
 
             .logo{
                 display: grid;
                 place-items: center;
-                // img{
-                //     width: 45px;
-                //     height: auto;
-                // }
+
+                img{
+                    width: auto;
+                    height: 10rem;
+                }
             }
         }
 
@@ -88,7 +88,7 @@ header{
 
                 .menu__link{
                     display: block;
-                    @include text($color-primary, $text-base, semibold, center, 2em);
+                    @include text($color-primary, $text-base, semibold, center, 3em);
                     border-top: 0.2rem solid $color-background;
                     
                     transition: background-color 1s;
@@ -100,6 +100,10 @@ header{
                     &:hover{
                         color: $color-secondary;
                         background-color: $color-background;
+                    }
+
+                    &--active{
+                        color: $color-secondary;
                     }
                 }
             }
@@ -150,10 +154,10 @@ header{
             .logo-section{
                 min-height: 20vh;
 
-                .logo img{
-                    width: 50px;
-                    height: auto;
-                }
+                // .logo img{
+                //     width: 80px;
+                //     height: auto;
+                // }
             }
 
             .social-icons{

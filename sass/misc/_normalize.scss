@@ -16,6 +16,15 @@ body{
     font-family: map-get($fonts, text);
 }
 
+.trail { /* className for the trail elements */
+    position: absolute;
+    height: 4px; 
+    width: 4px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 15px 3px $color-primary;
+    background: $color-primary;
+  }
+
 ul{
     list-style-type: none;
     // padding-left: 0;
@@ -23,4 +32,8 @@ ul{
 
 a{
     text-decoration: none;
+}
+
+.main-content{
+    margin-left: 20rem;
 }
