@@ -1,0 +1,121 @@
+#contactme{
+    .main-content__form{
+        width: 90%;
+        margin: auto;
+
+        .form__write{
+            @include flex(column, start, stretch, 0);
+            margin: $spacing-l 0 $spacing-s;
+    
+            .form-floating{
+                .contact__box{
+                    margin-bottom: $spacing-m;
+                    height: 7rem;
+                    background: var(--color-aside);
+                    @include text(var(--color-text), $text-base, regular, left, 1em);
+                    border: none;
+                    border-bottom: 2px solid var(--color-primary);
+                }
+                
+                .contact__box--text-area{
+                    @extend .contact__box;
+                    height: 20rem;
+                }
+    
+                label{
+                    @include text(var(--color-primary), $text-base, regular, left, 1em);
+                    padding: $spacing-s;
+                }
+    
+                // .form-control:focus{
+                //     box-shadow: 0 0 $spacing-s $s-desktop var(--color-primary);
+                // }
+            }
+        }
+        .form-check{
+            .form-check-input{
+                height: 1.6rem;
+                width: 1.6rem;
+                &:checked {
+                    background-color: var(--color-primary);
+                    border-color: var(--color-primary);
+                }
+            }
+        }
+    
+        .form__send{
+            height: 5rem;
+            width: 100%;
+            @include text(var(--color-primary), $text-base, regular, center, 1em);
+            margin-bottom: $spacing-l;
+        }
+    }
+
+    .main-content__social-media{
+        @include flex (row, center, center, $spacing-s);
+        .social-media{
+            margin-bottom: $spacing-l;
+            .social-media__container{
+                @include flex (row, center, center, 0);
+                background: var(--color-primary); 
+                height: 5rem; 
+                overflow: hidden;
+                width: 5rem; 
+                border-radius: 50%; 
+                transition: 0.3s ease all;
+    
+                .container__icon, .container__text{ 
+                    cursor: pointer; 
+                    display: block; 
+                    // width: 100%; 
+                    transition: 0.3s ease all;
+                    
+                }
+    
+                .container__icon{
+                    height: 100%;
+                    fill: var(--color-background);
+                    z-index: 9999;
+                    padding-top: 1rem;
+                    padding-left: 1rem;
+                }
+    
+                .container__text{
+                    display: none;
+                    @include text (var(--color-background), $text-base, 600, center, 1em);
+                    z-index: 8888;
+                }
+    
+                &:hover{ 
+                    width: 20rem; 
+                    border-radius: 0.5rem;
+    
+                    .container__icon{ 
+                        display: none;
+                    }
+    
+                    .container__text{ 
+                        display: block;
+                    }
+                }
+            }
+        }
+    }  
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--color-aside);
+    --bs-btn-border-color: var(--color-aside);
+    --bs-btn-hover-bg: var(--color-primary);
+    --bs-btn-hover-border-color: var(--color-primary);
+    --bs-btn-active-bg: var(--color-primary);
+    --bs-btn-active-border-color: var(--color-primary);
+    --bs-btn-disabled-bg: var(--color-primary);
+    --bs-btn-disabled-border-color: var(--color-primary);
+    --bs-btn-focus-shadow-rgb: var(--color-primary);
+}
+
+
+
+
+    
