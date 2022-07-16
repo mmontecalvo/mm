@@ -26,19 +26,14 @@
                     @include text(var(--color-primary), $text-base, regular, left, 1em);
                     padding: $spacing-s;
                 }
-    
-                // .form-control:focus{
-                //     box-shadow: 0 0 $spacing-s $s-desktop var(--color-primary);
-                // }
-            }
-        }
-        .form-check{
-            .form-check-input{
-                height: 1.6rem;
-                width: 1.6rem;
-                &:checked {
-                    background-color: var(--color-primary);
-                    border-color: var(--color-primary);
+                
+                .form-control{
+                    transition: border-bottom 0.5s ease-in-out;
+
+                    &:focus{
+                        border-bottom: 2px solid var(--color-secondary);
+                        box-shadow: none;
+                    }
                 }
             }
         }
@@ -46,8 +41,13 @@
         .form__send{
             height: 5rem;
             width: 100%;
-            @include text(var(--color-primary), $text-base, regular, center, 1em);
+            @include text(var(--color-primary), $text-base, 600, center, 1em);
             margin-bottom: $spacing-l;
+            transition: background-color 0.5s ease-in-out;
+
+            &:hover{
+                color: var(--color-background);
+            }
         }
     }
 

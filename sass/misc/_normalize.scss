@@ -27,7 +27,7 @@ body{
 
 ul{
     list-style-type: none;
-    // padding-left: 0;
+    padding: 0;
 }
 
 a{
@@ -37,3 +37,15 @@ a{
 .main-content{
     margin-left: 20rem;
 }
+
+.gradient-background{
+    animation: fluido 2s ease infinite;
+    background: linear-gradient(60deg, var(--color-primary), var(--color-aside));
+    background-size: 300%;
+}
+
+@keyframes fluido {
+    0% { background-position: 0 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0 50% }
+  }

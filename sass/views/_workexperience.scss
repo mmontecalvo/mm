@@ -9,7 +9,7 @@
             padding-top: $spacing-l;
 
             h2 {
-                @include text (var(--color-primary), $text-l, regular, center, 1rem);
+                @include text (var(--color-primary), $text-xl, 700, center, 1rem);
             }
         }
     }

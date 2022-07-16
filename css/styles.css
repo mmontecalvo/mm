@@ -8,7 +8,7 @@
   --color-secondary: #0BE5CB;
   --color-text: #F8EAED;
   --bs-link-color: var(--color-background);
-  --bs-link-hover-color: var(--hover-secondary); }
+  --bs-link-hover-color: var(--color-secondary); }
 
 /* FONT-FAMILY */
 .font-title {
@@ -46,13 +46,27 @@ body {
   background: var(--color-primary); }
 
 ul {
-  list-style-type: none; }
+  list-style-type: none;
+  padding: 0; }
 
 a {
   text-decoration: none; }
 
 .main-content {
   margin-left: 20rem; }
+
+.gradient-background {
+  animation: fluido 2s ease infinite;
+  background: linear-gradient(60deg, var(--color-primary), var(--color-aside));
+  background-size: 300%; }
+
+@keyframes fluido {
+  0% {
+    background-position: 0 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0 50%; } }
 
 /* PARTIALS */
 header {
@@ -428,6 +442,73 @@ header {
     }
   }
   */
+#skills .main-content__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; }
+  #skills .main-content__info .info__title {
+    color: var(--color-primary);
+    font-size: 5.4em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1em; }
+  #skills .main-content__info .info__text {
+    color: var(--color-text);
+    font-size: 2.4em;
+    font-weight: regular;
+    text-align: justify;
+    line-height: 1em;
+    hyphens: auto;
+    padding: 0 6rem; }
+  #skills .main-content__info .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    width: 100%; }
+    #skills .main-content__info .skills .skills-container {
+      width: 40%; }
+      #skills .main-content__info .skills .skills-container .skills__type {
+        color: var(--color-secondary);
+        font-size: 3.6em;
+        font-weight: 600;
+        text-align: left;
+        line-height: 1em; }
+      #skills .main-content__info .skills .skills-container strong {
+        color: transparent;
+        font-size: 2.4em;
+        font-weight: 600;
+        text-align: left;
+        line-height: 1em;
+        -webkit-background-clip: text;
+        background-clip: text; }
+      #skills .main-content__info .skills .skills-container .skill {
+        width: 100%;
+        margin: 2rem 0; }
+        #skills .main-content__info .skills .skills-container .skill .skill__name {
+          color: var(--color-text);
+          font-size: 2.4em;
+          font-weight: 600;
+          text-align: left;
+          line-height: 1em; }
+        #skills .main-content__info .skills .skills-container .skill .skill__bar {
+          width: 100%;
+          height: 0.3rem;
+          background-color: var(--color-aside);
+          margin-top: 1rem; }
+          #skills .main-content__info .skills .skills-container .skill .skill__bar .bar__progress {
+            height: 100%;
+            background-color: var(--color-secondary); }
+            #skills .main-content__info .skills .skills-container .skill .skill__bar .bar__progress--html {
+              width: 90%; }
+            #skills .main-content__info .skills .skills-container .skill .skill__bar .bar__progress--css {
+              width: 80%; }
+            #skills .main-content__info .skills .skills-container .skill .skill__bar .bar__progress--js {
+              width: 20%; }
+
 #work-experience .main-content__info {
   height: 100vh; }
   #work-experience .main-content__info .info__header {
@@ -441,8 +522,8 @@ header {
     padding-top: 3rem; }
     #work-experience .main-content__info .info__header h2 {
       color: var(--color-primary);
-      font-size: 3.6em;
-      font-weight: regular;
+      font-size: 5.4em;
+      font-weight: 700;
       text-align: center;
       line-height: 1rem; }
 
@@ -540,21 +621,23 @@ header {
       text-align: left;
       line-height: 1em;
       padding: 1rem; }
-  #contactme .main-content__form .form-check .form-check-input {
-    height: 1.6rem;
-    width: 1.6rem; }
-    #contactme .main-content__form .form-check .form-check-input:checked {
-      background-color: var(--color-primary);
-      border-color: var(--color-primary); }
+    #contactme .main-content__form .form__write .form-floating .form-control {
+      transition: border-bottom 0.5s ease-in-out; }
+      #contactme .main-content__form .form__write .form-floating .form-control:focus {
+        border-bottom: 2px solid var(--color-secondary);
+        box-shadow: none; }
   #contactme .main-content__form .form__send {
     height: 5rem;
     width: 100%;
     color: var(--color-primary);
     font-size: 1.6em;
-    font-weight: regular;
+    font-weight: 600;
     text-align: center;
     line-height: 1em;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    transition: background-color 0.5s ease-in-out; }
+    #contactme .main-content__form .form__send:hover {
+      color: var(--color-background); }
 
 #contactme .main-content__social-media {
   display: flex;
