@@ -56,6 +56,10 @@ a {
 .main-content {
   margin-left: 20rem; }
 
+@media screen and (max-width: 950px) {
+  .main-content {
+    margin-left: 0; } }
+
 .gradient-background {
   animation: fluido 2s ease infinite;
   background: linear-gradient(60deg, var(--color-primary), var(--color-aside));
@@ -168,12 +172,13 @@ header {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
+      gap: 0;
       margin: 2rem auto; }
       .aside .aside-wrapper .social-icons svg {
         fill: var(--color-primary);
         height: 3rem;
-        width: 3rem; }
+        width: 3rem;
+        margin-top: 1rem; }
         .aside .aside-wrapper .social-icons svg:hover {
           fill: var(--color-secondary); }
     .aside .aside-wrapper .main-header__copyright {
@@ -208,6 +213,10 @@ header {
       margin: 0 auto; }
     .aside .aside-wrapper .main-header__copyright {
       padding: 1rem; } }
+
+@media screen and (max-height: 800px) {
+  .aside .aside-wrapper .social-icons svg {
+    margin-top: 0.3rem; } }
 
 .main-content__banner {
   height: 100%;
@@ -296,28 +305,33 @@ header {
     transform: scale(5); } }
 
 /* VIEWS */
+#about-me .main-content__banner .banner__title {
+  font-size: 15em; }
+
 #about-me .main-content__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem; }
+  gap: 3rem;
+  font-size: 1rem; }
   #about-me .main-content__info .info__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem; }
+    gap: 1rem;
+    max-width: 90%; }
     #about-me .main-content__info .info__title .title__name {
       color: var(--color-primary);
-      font-size: 9.6em;
+      font-size: 8.1em;
       font-weight: regular;
       text-align: center;
       line-height: 1em; }
     #about-me .main-content__info .info__title .title__degree {
       color: var(--color-secondary);
       font-size: 5.4em;
-      font-weight: semibold;
+      font-weight: 600;
       text-align: center;
       line-height: 1em; }
   #about-me .main-content__info .info__text {
@@ -325,20 +339,25 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     color: var(--color-text);
-    font-size: 3.6em;
+    font-size: 2.4em;
     font-weight: regular;
     text-align: justify;
     line-height: 1em;
     hyphens: auto;
-    padding: 0 3rem; }
+    width: 90%;
+    max-width: 1920px; }
+    #about-me .main-content__info .info__text p:nth-child(4) {
+      width: 100%; }
   #about-me .main-content__info .info__gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(13, 1fr); }
+    grid-template-rows: repeat(13, 1fr);
+    width: 100%; }
     #about-me .main-content__info .info__gallery img {
-      transition: filter 0.3s ease-in-out; }
+      transition: filter 0.3s ease-in-out;
+      width: 100%; }
       #about-me .main-content__info .info__gallery img:hover {
         filter: invert(100%); }
     #about-me .main-content__info .info__gallery img:nth-child(1) {
@@ -390,75 +409,34 @@ header {
       grid-column: 4;
       grid-row: 12/14; }
 
-/* MEDIA QUERIES 
-  @media screen and (max-width: 1191px) {
-    .hero-title {
-      font-size: 5rem;
-    }
-    #mouse-icon {
-      bottom: 14%;
-    }
-  }
-  @media screen and (max-width: 891px) {
-    .hero-title {
-      font-size: 4.5rem;
-    }
-    #mouse-icon {
-      bottom: 12%;
-      width: 30px;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .hero-title {
-      font-size: 3.5rem;
-    }
-    #mouse-icon {
-      bottom: 10%;
-    }
-  }
-  @media screen and (max-width: 575px) {
-    .hero-title {
-      font-size: 3rem;
-    }
-    #mouse-icon {
-      width: 20px;
-    }
-  }
-  
-  @media screen and (max-width: 1191px) {
-    .container {
-      width: auto;
-      margin: 3rem 2rem;
-      grid-gap: 35px;
-    }
-  }
-  @media screen and (max-width: 891px) {
-    .panel-text {
-      font-size: 1.25rem;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .container {
-      grid-template-areas:
-        "image"
-        "text";
-    }
-    .panel-image {
-      margin: 0px;
-    }
-  }
-  @media screen and (max-width: 575px) {
-    .container {
-      margin: 0rem 2rem;
-    }
-    .panel-text {
-      font-size: 1rem;
-    }
-    .btn {
-      font-size: 1rem;
-    }
-  }
-  */
+@media screen and (max-width: 950px) {
+  #about-me .main-content__banner .banner__title {
+    font-size: 10em; }
+  #about-me .main-content__info {
+    font-size: 0.8rem; } }
+
+@media screen and (max-width: 600px) {
+  #about-me .main-content__banner .banner__title {
+    font-size: 7em; }
+  #about-me .main-content__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 0.66rem; }
+    #about-me .main-content__info .info__gallery {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      width: 100%; } }
+
+@media screen and (max-width: 400px) {
+  #about-me .main-content__info {
+    font-size: 0.5rem; } }
+
 #education .main-content__info {
   height: 100vh;
   padding: 3rem; }
@@ -696,24 +674,28 @@ header {
   .tabContainer .tabs .tab .text {
     display: none; } }
 
-#contactme .main-content__info {
+#contact-me .main-content__banner .banner__title {
+  font-size: 12em; }
+
+#contact-me .main-content__info {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0; }
-  #contactme .main-content__info .main-content__form {
+  gap: 0;
+  font-size: 1rem; }
+  #contact-me .main-content__info .main-content__form {
     width: 90%;
     margin: auto; }
-    #contactme .main-content__info .main-content__form .form__write {
+    #contact-me .main-content__info .main-content__form .form__write {
       display: flex;
       flex-direction: column;
       justify-content: start;
       align-items: stretch;
       gap: 0;
       margin: 3rem 0 1rem; }
-      #contactme .main-content__info .main-content__form .form__write .form-floating .contact__box, #contactme .main-content__info .main-content__form .form__write .form-floating .contact__box--text-area {
+      #contact-me .main-content__info .main-content__form .form__write .form-floating .contact__box, #contact-me .main-content__info .main-content__form .form__write .form-floating .contact__box--text-area {
         margin-bottom: 2rem;
         height: 7rem;
         background: var(--color-aside);
@@ -724,21 +706,21 @@ header {
         line-height: 1em;
         border: none;
         border-bottom: 2px solid var(--color-primary); }
-      #contactme .main-content__info .main-content__form .form__write .form-floating .contact__box--text-area {
+      #contact-me .main-content__info .main-content__form .form__write .form-floating .contact__box--text-area {
         height: 20rem; }
-      #contactme .main-content__info .main-content__form .form__write .form-floating label {
+      #contact-me .main-content__info .main-content__form .form__write .form-floating label {
         color: var(--color-primary);
         font-size: 1.6em;
         font-weight: regular;
         text-align: left;
         line-height: 1em;
         padding: 1rem; }
-      #contactme .main-content__info .main-content__form .form__write .form-floating .form-control {
+      #contact-me .main-content__info .main-content__form .form__write .form-floating .form-control {
         transition: border-bottom 0.5s ease-in-out; }
-        #contactme .main-content__info .main-content__form .form__write .form-floating .form-control:focus {
+        #contact-me .main-content__info .main-content__form .form__write .form-floating .form-control:focus {
           border-bottom: 2px solid var(--color-secondary);
           box-shadow: none; }
-    #contactme .main-content__info .main-content__form .form__send {
+    #contact-me .main-content__info .main-content__form .form__send {
       height: 5rem;
       width: 100%;
       color: var(--color-primary);
@@ -748,17 +730,17 @@ header {
       line-height: 1em;
       margin-bottom: 3rem;
       transition: background-color 0.5s ease-in-out; }
-      #contactme .main-content__info .main-content__form .form__send:hover {
+      #contact-me .main-content__info .main-content__form .form__send:hover {
         color: var(--color-background); }
-  #contactme .main-content__info .main-content__social-media {
+  #contact-me .main-content__info .main-content__social-media {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1rem; }
-    #contactme .main-content__info .main-content__social-media .social-media {
+    #contact-me .main-content__info .main-content__social-media .social-media {
       margin-bottom: 3rem; }
-      #contactme .main-content__info .main-content__social-media .social-media .social-media__container {
+      #contact-me .main-content__info .main-content__social-media .social-media .social-media__container {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -770,17 +752,17 @@ header {
         width: 5rem;
         border-radius: 50%;
         transition: 0.3s ease all; }
-        #contactme .main-content__info .main-content__social-media .social-media .social-media__container .container__icon, #contactme .main-content__info .main-content__social-media .social-media .social-media__container .container__text {
+        #contact-me .main-content__info .main-content__social-media .social-media .social-media__container .container__icon, #contact-me .main-content__info .main-content__social-media .social-media .social-media__container .container__text {
           cursor: pointer;
           display: block;
           transition: 0.3s ease all; }
-        #contactme .main-content__info .main-content__social-media .social-media .social-media__container .container__icon {
+        #contact-me .main-content__info .main-content__social-media .social-media .social-media__container .container__icon {
           height: 100%;
           fill: var(--color-background);
           z-index: 9999;
           padding-top: 1rem;
           padding-left: 1rem; }
-        #contactme .main-content__info .main-content__social-media .social-media .social-media__container .container__text {
+        #contact-me .main-content__info .main-content__social-media .social-media .social-media__container .container__text {
           display: none;
           color: var(--color-background);
           font-size: 1.6em;
@@ -788,12 +770,12 @@ header {
           text-align: center;
           line-height: 1em;
           z-index: 8888; }
-        #contactme .main-content__info .main-content__social-media .social-media .social-media__container:hover {
+        #contact-me .main-content__info .main-content__social-media .social-media .social-media__container:hover {
           width: 20rem;
           border-radius: 0.5rem; }
-          #contactme .main-content__info .main-content__social-media .social-media .social-media__container:hover .container__icon {
+          #contact-me .main-content__info .main-content__social-media .social-media .social-media__container:hover .container__icon {
             display: none; }
-          #contactme .main-content__info .main-content__social-media .social-media .social-media__container:hover .container__text {
+          #contact-me .main-content__info .main-content__social-media .social-media .social-media__container:hover .container__text {
             display: block; }
 
 .btn-primary {
@@ -806,3 +788,13 @@ header {
   --bs-btn-disabled-bg: var(--color-primary);
   --bs-btn-disabled-border-color: var(--color-primary);
   --bs-btn-focus-shadow-rgb: var(--color-primary); }
+
+@media screen and (max-width: 950px) {
+  #contact-me .main-content__banner .banner__title {
+    font-size: 9em; } }
+
+@media screen and (max-width: 600px) {
+  #contact-me .main-content__banner .banner__title {
+    font-size: 5em; }
+  #contact-me .main-content__info {
+    font-size: 0.8rem; } }

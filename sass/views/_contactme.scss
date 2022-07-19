@@ -1,7 +1,13 @@
-#contactme{
+#contact-me{
+    .main-content__banner{
+        .banner__title{
+            font-size: 12em;
+        }
+    }
     .main-content__info{
         height: 100vh;
         @include flex(column, center, center, 0);
+        font-size: $text-desktop;
 
         .main-content__form{
             width: 90%;
@@ -57,8 +63,10 @@
     
         .main-content__social-media{
             @include flex (row, center, center, $spacing-s);
+
             .social-media{
                 margin-bottom: $spacing-l;
+
                 .social-media__container{
                     @include flex (row, center, center, 0);
                     background: var(--color-primary); 
@@ -120,7 +128,26 @@
     --bs-btn-focus-shadow-rgb: var(--color-primary);
 }
 
+@media screen and (max-width: 950px){
+    #contact-me{
+        .main-content__banner{
+            .banner__title{
+                font-size: 9em;
+            }
+        }
+    }
+}
+  
+  @media screen and (max-width: 600px){
+    #contact-me{
+        .main-content__banner{
+            .banner__title{
+            font-size: 5em;
+            }
+        }
 
-
-
-    
+        .main-content__info {
+            font-size: $text-intermediate;
+        }
+    }
+}

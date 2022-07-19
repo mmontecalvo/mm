@@ -110,13 +110,14 @@ header{
         }
 
         .social-icons{
-            @include flex(row, center, center, $spacing-s);
+            @include flex(row, center, center, 0);
             margin: $spacing-m auto;
 
             svg{
                 fill: var(--color-primary);
                 height: 3rem;
                 width: 3rem;
+                margin-top: $spacing-s;
         
                 &:hover{
                     fill: var(--color-secondary);
@@ -167,6 +168,18 @@ header{
 
             .main-header__copyright{
                 padding: $spacing-s;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .aside{
+        .aside-wrapper{
+            .social-icons{
+                svg{
+                    margin-top: $spacing-xs*3;
+                }
             }
         }
     }
