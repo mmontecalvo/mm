@@ -5,61 +5,62 @@
         .info__header {
             width: 100%;
             height: 20vh;
-            @include flex(row, center, center, 0);
-            padding-top: $spacing-l;
+            @include flex(column, space-between, center, 0);
+            padding-top: $spacing-l*3;
 
             h2 {
                 @include text (var(--color-primary), $text-xl, 700, center, 1rem);
             }
+
+            .tabContainer {
+                position: relative;
+                bottom: 0;
+                width: 100%;
+                background-color: var(--color-aside);
+                @include text (var(--color-primary), $text-m, regular, center, 1rem);
+
+                .tabs {
+                    position: relative;
+                    @include flex(row, space-around, center, 0);
+                    flex-wrap: row nowrap;
+
+                    .tab {
+                        display: block;
+                        padding: 20px;
+                        width: 100%;
+                        text-align: center;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                        cursor: pointer;
+
+                        &__text {
+                            display: inline-block;
+                            vertical-align: middle;
+                            cursor: pointer;
+                            font-size: 20px;
+                            margin-left: 10px;
+                        }
+
+                        &.active {
+                            @include text (var(--color-secondary), $text-m, 600, center, 1rem);
+                        }
+                    }
+
+                    .indicator {
+                        position: absolute;
+                        bottom: 0;
+                        height: 3px;
+                        background: var(--color-secondary);
+                    }
+                }
+            }
         }
     }
 }
 
-/* Variables */
-$mainBgColor: #f2f2f2;
-$mainTextColor: #f2f2f2;
-$accentColor: #673AB7;
 
-/* Mixins */
-/* Common */
 
-/* App */
 
-.tabContainer {
-    width: 100%;
-    height: 10vh;
-    @include text (var(--color-primary), $text-m, regular, center, 1rem);
-    .tabs {
-        position: relative;
-        @include flex(row, space-around, center, 0);
-        flex-wrap: row nowrap;
-        .tab {
-            display: block;
-            padding: 20px;
-            width: 100%;
-            text-align: center;
-            text-transform: uppercase;
-            white-space: nowrap;
-            cursor: pointer;
-            &__text {
-                display: inline-block;
-                vertical-align: middle;
-                cursor: pointer;
-                font-size: 20px;
-                margin-left: 10px;
-            }
-            &.active {
-                @include text (var(--color-secondary), $text-m, 600, center, 1rem);
-            }
-        }
-        .indicator {
-            position: absolute;
-            bottom: 0;
-            height: 3px;
-            background: var(--color-secondary);
-        }
-    }
-}
 .sectionsContainer {
     color: #fff;
     width: 100%;

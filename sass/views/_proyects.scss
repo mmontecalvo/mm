@@ -1,0 +1,47 @@
+#proyects{
+    .main-content__info{
+        height: 100vh;
+        padding: $spacing-l;
+
+        .info__title{
+            @include text(var(--color-primary), $text-xl, 700, center, 1em);
+            margin-bottom: $spacing-l;
+        }
+
+        .cards{
+            @include flex(row, center, center, $spacing-l);
+            flex-wrap: wrap;
+
+            .card{
+                width: 30%;
+                background-color: var(--color-aside);
+                color: var(--color-text);
+                padding: $spacing-m;
+                gap: $spacing-m;
+
+                .card__header{
+                    @include flex(row, center, center, 0);
+
+                    img{
+                        height: 10rem;
+                    }
+                }
+
+                .card__body{
+                    .card__title{
+                        @include text(var(--color-primary), $text-l, 600, center, 1em);
+                    }
+
+                    .card__text{
+                        @include text(var(--color-text), $text-m, regular, justify, 1em);
+                        hyphens: auto;
+                    }
+                }
+
+                .card__footer{
+                    @include text(var(--color-background), $text-m, 600, center, 1em);
+                }
+            }
+        }
+    }
+}

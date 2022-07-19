@@ -17,7 +17,7 @@
           @include flex (column, center, center, $spacing-l);
           @include text (var(--color-text), $text-l, regular, justify, 1em);
           hyphens: auto;
-          padding: 0 $spacing-l*4;
+          padding: 0 $spacing-l;
       }
   
       .info__gallery{

@@ -1,6 +1,7 @@
 #skills{
     .main-content__info{
         @include flex(column, center, center, $spacing-l);
+        height: 100vh;
         
         .info__title{
             @include text(var(--color-primary), $text-xl, 700, center, 1em);

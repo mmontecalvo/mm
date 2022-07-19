@@ -1,101 +1,106 @@
 #contactme{
-    .main-content__form{
-        width: 90%;
-        margin: auto;
+    .main-content__info{
+        height: 100vh;
+        @include flex(column, center, center, 0);
 
-        .form__write{
-            @include flex(column, start, stretch, 0);
-            margin: $spacing-l 0 $spacing-s;
+        .main-content__form{
+            width: 90%;
+            margin: auto;
     
-            .form-floating{
-                .contact__box{
-                    margin-bottom: $spacing-m;
-                    height: 7rem;
-                    background: var(--color-aside);
-                    @include text(var(--color-text), $text-base, regular, left, 1em);
-                    border: none;
-                    border-bottom: 2px solid var(--color-primary);
-                }
-                
-                .contact__box--text-area{
-                    @extend .contact__box;
-                    height: 20rem;
-                }
-    
-                label{
-                    @include text(var(--color-primary), $text-base, regular, left, 1em);
-                    padding: $spacing-s;
-                }
-                
-                .form-control{
-                    transition: border-bottom 0.5s ease-in-out;
-
-                    &:focus{
-                        border-bottom: 2px solid var(--color-secondary);
-                        box-shadow: none;
+            .form__write{
+                @include flex(column, start, stretch, 0);
+                margin: $spacing-l 0 $spacing-s;
+        
+                .form-floating{
+                    .contact__box{
+                        margin-bottom: $spacing-m;
+                        height: 7rem;
+                        background: var(--color-aside);
+                        @include text(var(--color-text), $text-base, regular, left, 1em);
+                        border: none;
+                        border-bottom: 2px solid var(--color-primary);
                     }
-                }
-            }
-        }
-    
-        .form__send{
-            height: 5rem;
-            width: 100%;
-            @include text(var(--color-primary), $text-base, 600, center, 1em);
-            margin-bottom: $spacing-l;
-            transition: background-color 0.5s ease-in-out;
-
-            &:hover{
-                color: var(--color-background);
-            }
-        }
-    }
-
-    .main-content__social-media{
-        @include flex (row, center, center, $spacing-s);
-        .social-media{
-            margin-bottom: $spacing-l;
-            .social-media__container{
-                @include flex (row, center, center, 0);
-                background: var(--color-primary); 
-                height: 5rem; 
-                overflow: hidden;
-                width: 5rem; 
-                border-radius: 50%; 
-                transition: 0.3s ease all;
-    
-                .container__icon, .container__text{ 
-                    cursor: pointer; 
-                    display: block; 
-                    // width: 100%; 
-                    transition: 0.3s ease all;
                     
-                }
-    
-                .container__icon{
-                    height: 100%;
-                    fill: var(--color-background);
-                    z-index: 9999;
-                    padding-top: 1rem;
-                    padding-left: 1rem;
-                }
-    
-                .container__text{
-                    display: none;
-                    @include text (var(--color-background), $text-base, 600, center, 1em);
-                    z-index: 8888;
-                }
-    
-                &:hover{ 
-                    width: 20rem; 
-                    border-radius: 0.5rem;
-    
-                    .container__icon{ 
-                        display: none;
+                    .contact__box--text-area{
+                        @extend .contact__box;
+                        height: 20rem;
                     }
+        
+                    label{
+                        @include text(var(--color-primary), $text-base, regular, left, 1em);
+                        padding: $spacing-s;
+                    }
+                    
+                    .form-control{
+                        transition: border-bottom 0.5s ease-in-out;
     
-                    .container__text{ 
-                        display: block;
+                        &:focus{
+                            border-bottom: 2px solid var(--color-secondary);
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        
+            .form__send{
+                height: 5rem;
+                width: 100%;
+                @include text(var(--color-primary), $text-base, 600, center, 1em);
+                margin-bottom: $spacing-l;
+                transition: background-color 0.5s ease-in-out;
+    
+                &:hover{
+                    color: var(--color-background);
+                }
+            }
+        }
+    
+        .main-content__social-media{
+            @include flex (row, center, center, $spacing-s);
+            .social-media{
+                margin-bottom: $spacing-l;
+                .social-media__container{
+                    @include flex (row, center, center, 0);
+                    background: var(--color-primary); 
+                    height: 5rem; 
+                    overflow: hidden;
+                    width: 5rem; 
+                    border-radius: 50%; 
+                    transition: 0.3s ease all;
+        
+                    .container__icon, .container__text{ 
+                        cursor: pointer; 
+                        display: block; 
+                        // width: 100%; 
+                        transition: 0.3s ease all;
+                        
+                    }
+        
+                    .container__icon{
+                        height: 100%;
+                        fill: var(--color-background);
+                        z-index: 9999;
+                        padding-top: 1rem;
+                        padding-left: 1rem;
+                    }
+        
+                    .container__text{
+                        display: none;
+                        @include text (var(--color-background), $text-base, 600, center, 1em);
+                        z-index: 8888;
+                    }
+        
+                    &:hover{ 
+                        width: 20rem; 
+                        border-radius: 0.5rem;
+        
+                        .container__icon{ 
+                            display: none;
+                        }
+        
+                        .container__text{ 
+                            display: block;
+                        }
                     }
                 }
             }
