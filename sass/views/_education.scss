@@ -1,0 +1,46 @@
+#education{
+    .main-content__info{
+        height: 100vh;
+        padding: $spacing-l;
+
+        .info__title{
+            @include text(var(--color-primary), $text-xl, 700, center, 1em);
+            margin-bottom: $spacing-l;
+        }
+
+        .accordion{
+            --bs-accordion-border-color: var(--color-secondary);
+            --bs-accordion-active-color: var(--color-secondary);
+            --bs-accordion-btn-focus-border-color: var(--color-secondary);
+            --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--color-secondary);
+            --bs-accordion-btn-icon: none;
+            --bs-accordion-btn-active-icon: none;
+
+            
+            .accordion-item{
+                border: none;
+                
+                .accordion-header{
+                    .accordion-button{
+                        @include text(var(--color-primary), $text-m, 600, center, 1em);
+                        background-color: var(--color-aside);
+
+                        &:focus{
+                            color: var(--color-secondary);
+                        }
+                    }
+                }
+                
+                .accordion-collapse{
+                    background-color: var(--color-background);
+                    border-color: var(--color-primary);
+
+                    .accordion-body{
+                        @include text(var(--color-text), $text-base, regular, justify, 1em);
+                        hyphens: auto;
+                    }
+                }
+            }
+        }
+    }
+}

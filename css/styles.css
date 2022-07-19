@@ -8,7 +8,8 @@
   --color-secondary: #0BE5CB;
   --color-text: #F8EAED;
   --bs-link-color: var(--color-background);
-  --bs-link-hover-color: var(--color-secondary); }
+  --bs-link-hover-color: var(--color-secondary);
+  --bs-body-color: var(--color-aside); }
 
 /* FONT-FAMILY */
 .font-title {
@@ -458,6 +459,45 @@ header {
     }
   }
   */
+#education .main-content__info {
+  height: 100vh;
+  padding: 3rem; }
+  #education .main-content__info .info__title {
+    color: var(--color-primary);
+    font-size: 5.4em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1em;
+    margin-bottom: 3rem; }
+  #education .main-content__info .accordion {
+    --bs-accordion-border-color: var(--color-secondary);
+    --bs-accordion-active-color: var(--color-secondary);
+    --bs-accordion-btn-focus-border-color: var(--color-secondary);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--color-secondary);
+    --bs-accordion-btn-icon: none;
+    --bs-accordion-btn-active-icon: none; }
+    #education .main-content__info .accordion .accordion-item {
+      border: none; }
+      #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button {
+        color: var(--color-primary);
+        font-size: 2.4em;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1em;
+        background-color: var(--color-aside); }
+        #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button:focus {
+          color: var(--color-secondary); }
+      #education .main-content__info .accordion .accordion-item .accordion-collapse {
+        background-color: var(--color-background);
+        border-color: var(--color-primary); }
+        #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body {
+          color: var(--color-text);
+          font-size: 1.6em;
+          font-weight: regular;
+          text-align: justify;
+          line-height: 1em;
+          hyphens: auto; }
+
 #proyects .main-content__info {
   height: 100vh;
   padding: 3rem; }
