@@ -437,7 +437,15 @@ header {
   #about-me .main-content__info {
     font-size: 0.5rem; } }
 
+#education .main-content__banner .banner__title {
+  font-size: 15em; }
+
 #education .main-content__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
   height: 100vh;
   padding: 3rem; }
   #education .main-content__info .info__title {
@@ -448,33 +456,135 @@ header {
     line-height: 1em;
     margin-bottom: 3rem; }
   #education .main-content__info .accordion {
-    --bs-accordion-border-color: var(--color-secondary);
-    --bs-accordion-active-color: var(--color-secondary);
-    --bs-accordion-btn-focus-border-color: var(--color-secondary);
-    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--color-secondary);
+    width: 80%;
+    --bs-accordion-bg: var(--color-background);
+    --bs-accordion-border-color: var(--color-aside);
+    --bs-accordion-active-color: var(--color-aside);
+    --bs-accordion-btn-focus-border-color: var(--color-aside);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--color-aside);
     --bs-accordion-btn-icon: none;
     --bs-accordion-btn-active-icon: none; }
     #education .main-content__info .accordion .accordion-item {
-      border: none; }
+      border: 0.2rem solid var(--color-aside); }
       #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button {
-        color: var(--color-primary);
-        font-size: 2.4em;
-        font-weight: 600;
-        text-align: center;
-        line-height: 1em;
-        background-color: var(--color-aside); }
-        #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button:focus {
-          color: var(--color-secondary); }
-      #education .main-content__info .accordion .accordion-item .accordion-collapse {
-        background-color: var(--color-background);
-        border-color: var(--color-primary); }
-        #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body {
-          color: var(--color-text);
-          font-size: 1.6em;
-          font-weight: regular;
-          text-align: justify;
+        background-color: var(--color-primary);
+        opacity: 0.7; }
+        #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button h3 {
+          color: var(--color-aside);
+          font-size: 3.6em;
+          font-weight: 600;
+          text-align: left;
           line-height: 1em;
-          hyphens: auto; }
+          width: 70%; }
+        #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button:focus {
+          opacity: 1; }
+        #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button img {
+          position: absolute;
+          right: 0;
+          max-width: 18rem;
+          padding-right: 1rem; }
+      #education .main-content__info .accordion .accordion-item .accordion-collapse {
+        background-color: var(--color-background); }
+        #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body {
+          font-size: 1.2rem; }
+          #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body__institution {
+            color: var(--color-primary);
+            font-size: 2.4em;
+            font-weight: 600;
+            text-align: left;
+            line-height: 1em;
+            margin: 1rem 0; }
+          #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body__date {
+            color: var(--color-secondary);
+            font-size: 1.6em;
+            font-weight: normal;
+            text-align: left;
+            line-height: 1em;
+            margin: 1rem 0; }
+          #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body__info {
+            color: var(--color-text);
+            font-size: 1.6em;
+            font-weight: normal;
+            text-align: justify;
+            line-height: 1em;
+            hyphens: auto;
+            margin: 1rem 0; }
+          #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body .info__items {
+            color: var(--color-text);
+            font-size: 1.6em;
+            font-weight: normal;
+            text-align: justify;
+            line-height: 1em;
+            margin-left: 3rem; }
+            #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body .info__items li {
+              margin-top: 1rem; }
+              #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body .info__items li strong {
+                color: var(--color-secondary); }
+
+@media screen and (max-width: 1340px) {
+  #education .main-content__banner .banner__title {
+    font-size: 10em; } }
+
+@media screen and (max-width: 1180px) {
+  #education .main-content__info .accordion {
+    width: 90%; }
+    #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button h3 {
+      font-size: 2.4em; }
+    #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body {
+      font-size: 1rem; } }
+
+@media screen and (max-width: 767px) {
+  #education .main-content__banner .banner__title {
+    font-size: 8em; }
+  #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button img {
+    max-width: 14rem; } }
+
+@media screen and (max-width: 600px) {
+  #education .main-content__banner .banner__title {
+    font-size: 6em; }
+  #education .main-content__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem; }
+    #education .main-content__info .info__title {
+      font-size: 3.6em;
+      margin-bottom: 2rem; }
+    #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button h3 {
+      font-size: 2em; }
+    #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button img {
+      max-width: 12rem; } }
+
+@media screen and (max-width: 480px) {
+  #education .main-content__banner .banner__title {
+    font-size: 4em; }
+  #education .main-content__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem; }
+    #education .main-content__info .info__title {
+      font-size: 2.4em;
+      margin-bottom: 1rem; }
+    #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0; }
+      #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button h3 {
+        font-size: 1.8em;
+        text-align: center; }
+      #education .main-content__info .accordion .accordion-item .accordion-header .accordion-button img {
+        position: relative;
+        max-width: 10rem;
+        padding-right: 0; }
+    #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body {
+      font-size: 0.8rem; } }
 
 #proyects .main-content__info {
   height: 100vh;

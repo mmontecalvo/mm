@@ -4,6 +4,7 @@
         font-size: 15em;
       }
     }
+    
     .main-content__info {
       @include flex (column, center, center, $spacing-l);
       font-size: $text-desktop;
