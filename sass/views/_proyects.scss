@@ -1,19 +1,26 @@
 #proyects{
+    .main-content__banner{
+        .banner__title{
+            font-size: 15em;
+        }
+    }
+
     .main-content__info{
-        height: 100vh;
+        @include flex(column, center, center, $spacing-l);
+        min-height: 100vh;
         padding: $spacing-l;
 
         .info__title{
             @include text(var(--color-primary), $text-xl, 700, center, 1em);
-            margin-bottom: $spacing-l;
         }
 
         .cards{
-            @include flex(row, center, center, $spacing-l);
-            flex-wrap: wrap;
+            justify-content: center;
+            gap: $spacing-l;
+            margin-bottom: $spacing-l;
 
             .card{
-                width: 30%;
+                width: 30rem;
                 background-color: var(--color-aside);
                 color: var(--color-text);
                 padding: $spacing-m;
@@ -23,7 +30,7 @@
                     @include flex(row, center, center, 0);
 
                     img{
-                        height: 10rem;
+                        height: 8rem;
                     }
                 }
 
@@ -33,14 +40,93 @@
                     }
 
                     .card__text{
-                        @include text(var(--color-text), $text-m, regular, justify, 1em);
+                        @include text(var(--color-text), $text-base, regular, justify, 1em);
                         hyphens: auto;
+
+                        span{
+                            color: var(--color-secondary);
+                        }
                     }
                 }
 
                 .card__footer{
                     @include text(var(--color-background), $text-m, 600, center, 1em);
                 }
+            }
+
+            .card--model{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1340px){
+    #proyects{
+        .main-content__banner{
+            .banner__title{
+                font-size: 10em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    #proyects{
+        .main-content__banner{
+            .banner__title{
+                font-size: 8em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    #proyects{
+        .main-content__banner{
+            .banner__title{
+                font-size: 6em;
+            }
+        }
+
+        .main-content__info{
+            padding: $spacing-m;
+    
+            .info__title{
+                font-size: $text-l;
+            }
+    
+            .cards{
+                gap: $spacing-m;
+                margin-bottom: $spacing-m;
+    
+                .card{
+                    .card__header{
+                        img{
+                            height: 6rem;
+                        }
+                    }
+    
+                    .card__body{
+                        .card__title{
+                            font-size: $text-m;
+                        }
+                    }
+    
+                    .card__footer{
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    #proyects{
+        .main-content__banner{
+            .banner__title{
+                font-size: 4em;
             }
         }
     }

@@ -212,7 +212,7 @@ header {
       gap: 0.1rem;
       margin: 0 auto; }
     .aside .aside-wrapper .main-header__copyright {
-      padding: 1rem; } }
+      padding: 1rem 3rem; } }
 
 @media screen and (max-height: 800px) {
   .aside .aside-wrapper .social-icons svg {
@@ -586,25 +586,29 @@ header {
     #education .main-content__info .accordion .accordion-item .accordion-collapse .accordion-body {
       font-size: 0.8rem; } }
 
+#proyects .main-content__banner .banner__title {
+  font-size: 15em; }
+
 #proyects .main-content__info {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  min-height: 100vh;
   padding: 3rem; }
   #proyects .main-content__info .info__title {
     color: var(--color-primary);
     font-size: 5.4em;
     font-weight: 700;
     text-align: center;
-    line-height: 1em;
-    margin-bottom: 3rem; }
+    line-height: 1em; }
   #proyects .main-content__info .cards {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     gap: 3rem;
-    flex-wrap: wrap; }
+    margin-bottom: 3rem; }
     #proyects .main-content__info .cards .card {
-      width: 30%;
+      width: 30rem;
       background-color: var(--color-aside);
       color: var(--color-text);
       padding: 2rem;
@@ -616,7 +620,7 @@ header {
         align-items: center;
         gap: 0; }
         #proyects .main-content__info .cards .card .card__header img {
-          height: 10rem; }
+          height: 8rem; }
       #proyects .main-content__info .cards .card .card__body .card__title {
         color: var(--color-primary);
         font-size: 3.6em;
@@ -625,17 +629,50 @@ header {
         line-height: 1em; }
       #proyects .main-content__info .cards .card .card__body .card__text {
         color: var(--color-text);
-        font-size: 2.4em;
+        font-size: 1.6em;
         font-weight: regular;
         text-align: justify;
         line-height: 1em;
         hyphens: auto; }
+        #proyects .main-content__info .cards .card .card__body .card__text span {
+          color: var(--color-secondary); }
       #proyects .main-content__info .cards .card .card__footer {
         color: var(--color-background);
         font-size: 2.4em;
         font-weight: 600;
         text-align: center;
         line-height: 1em; }
+    #proyects .main-content__info .cards .card--model {
+      opacity: 0.5; }
+
+@media screen and (max-width: 1340px) {
+  #proyects .main-content__banner .banner__title {
+    font-size: 10em; } }
+
+@media screen and (max-width: 767px) {
+  #proyects .main-content__banner .banner__title {
+    font-size: 8em; } }
+
+@media screen and (max-width: 600px) {
+  #proyects .main-content__banner .banner__title {
+    font-size: 6em; }
+  #proyects .main-content__info {
+    padding: 2rem; }
+    #proyects .main-content__info .info__title {
+      font-size: 3.6em; }
+    #proyects .main-content__info .cards {
+      gap: 2rem;
+      margin-bottom: 2rem; }
+      #proyects .main-content__info .cards .card .card__header img {
+        height: 6rem; }
+      #proyects .main-content__info .cards .card .card__body .card__title {
+        font-size: 2.4em; }
+      #proyects .main-content__info .cards .card .card__footer {
+        font-size: 2em; } }
+
+@media screen and (max-width: 480px) {
+  #proyects .main-content__banner .banner__title {
+    font-size: 4em; } }
 
 #skills .main-content__info {
   display: flex;
